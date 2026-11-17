@@ -2,6 +2,7 @@
 
 SITE = "https://www.javelinre.com"
 CAL = "https://calendly.com/ryan-arlorent/15-min-check-in-call"
+TOUGHLEAF = "https://app.toughleaf.com/company/javelin-residential-1170757"
 LINKEDIN = "https://www.linkedin.com/in/ryan-e-moorehead-8672352/"
 ADDRESS = {"street": "173 Huguenot Street, Suite 200", "city": "New Rochelle", "region": "NY", "zip": "10801"}
 EMAIL = "info@javelinre.com"

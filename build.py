@@ -28,7 +28,7 @@ def org_schema():
       "email":EMAIL,"address":{"@type":"PostalAddress","streetAddress":ADDRESS["street"],"addressLocality":ADDRESS["city"],"addressRegion":ADDRESS["region"],"postalCode":ADDRESS["zip"],"addressCountry":"US"},
       "areaServed":[{"@type":"Place","name":a} for a in AREA],
       "founder":{"@type":"Person","@id":SITE+"/leadership#ryan","name":"Ryan Moorehead"},
-      "sameAs":[LINKEDIN],
+      "sameAs":[LINKEDIN, TOUGHLEAF],
       "description":"Property management, asset management and compliance, construction and construction management, procurement, staffing and organizational management for affordable and multifamily housing owners.",
       "hasOfferCatalog":{"@type":"OfferCatalog","name":"Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":v["name"],"url":f"{SITE}/services/{k}"}} for k,v in SERVICES.items()]}}
 
@@ -48,7 +48,7 @@ def head(c, title, desc, schemas, og_type="website"):
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
 <link rel="canonical" href="{canon}">
@@ -93,7 +93,7 @@ def foot(c):
     <p class="foot-tag">Innovative Real Estate Solutions<br><em>The Right Aim. The Perfect Trajectory. Exceptional Results.</em></p>
     <ul class="foot-nav">
       <li><a href="{c.L('services')}">Services</a></li><li><a href="{c.L('capabilities')}">Capabilities</a></li><li><a href="{c.L('leadership')}">Leadership</a></li>
-      <li><a href="{c.L('speaking')}">Speaking</a></li><li><a href="{c.L('coaching')}">Coaching</a></li><li><a href="{c.L('insights')}">Insights</a></li><li><a href="{c.L('book')}">Book a call</a></li><li><a href="{LINKEDIN}" rel="me">LinkedIn</a></li>
+      <li><a href="{c.L('speaking')}">Speaking</a></li><li><a href="{c.L('coaching')}">Coaching</a></li><li><a href="{c.L('insights')}">Insights</a></li><li><a href="{c.L('book')}">Book a call</a></li><li><a href="{LINKEDIN}" rel="me">LinkedIn</a></li><li><a href="{TOUGHLEAF}">Project portfolio</a></li>
     </ul>
     <address>{ADDRESS['street']}, {ADDRESS['city']}, {ADDRESS['region']} {ADDRESS['zip']}<br><a href="mailto:{EMAIL}">{EMAIL}</a></address>
     <div class="legal">&copy; <span id="yr">2026</span> Javelin Residential. Serving owners in New York City, Westchester and New Jersey. &middot; <a href="{c.L('privacy')}">Privacy policy</a></div>
@@ -296,7 +296,7 @@ def p_capabilities(c):
 <section class="page-head"><div class="wrap">{crumbs_html(c,items)}
   <h1>Capability statement</h1><hr class="divider">
   <p class="lede">For housing authorities, government agencies, nonprofit owners and private owners issuing RFPs, RFQs and contracts for property operations, compliance, construction and staffing.</p>
-  <div class="cta-row no-print"><a class="btn btn-solid" href="#rfp">Send an RFP or scope</a><a class="btn btn-line" href="{cal('capabilities','head')}" data-cta="cap-calendly">Book a 15-minute call</a></div>
+  <div class="cta-row no-print"><a class="btn btn-solid" href="#rfp">Send an RFP or scope</a><a class="btn btn-line" href="{TOUGHLEAF}">View project portfolio</a><a class="btn btn-line" href="{cal('capabilities','head')}" data-cta="cap-calendly">Book a 15-minute call</a></div>
 </div></section>
 <section class="section"><div class="wrap">
   <div class="cap">
@@ -320,6 +320,7 @@ def p_capabilities(c):
       <tr><td>Address</td><td>{ADDRESS['street']}, {ADDRESS['city']}, {ADDRESS['region']} {ADDRESS['zip']}</td></tr>
       <tr><td>Email</td><td><a href="mailto:{EMAIL}">{EMAIL}</a></td></tr>
       <tr><td>Web</td><td>www.javelinre.com</td></tr>
+      <tr><td>Portfolio</td><td><a href="{TOUGHLEAF}">Projects on Tough Leaf</a></td></tr>
       <tr><td>UEI / CAGE</td><td class="pending">To be added</td></tr>
       <tr><td>Certifications</td><td>MBE certification in progress</td></tr>
       <tr><td>Memberships</td><td>REEC, NYREC, ULI</td></tr>
@@ -371,7 +372,7 @@ def p_leadership(c):
     <h2>Recognition, coaching and community</h2>
     <p>GlobeSt.com named Ryan to its Top 50 Under 40 at the 2016 Real Estate Forum. Since 2013 he has been a real estate career coach for Columbia University, working with MBA students and alumni moving into or within real estate, and he now offers one-on-one coaching through Javelin. He is a member of REEC, NYREC and ULI, and has spoken at REEC, DCRE, AAREPNY and CRETech on affordable housing operations, real estate technology and careers.</p>
   </div>
-  <div class="cta-row" style="margin-top:36px"><a class="btn btn-solid" href="{cal('leadership','bio')}" data-cta="bio-calendly">Book a call with Ryan</a><a class="btn btn-line" href="{c.L('speaking')}">Invite Ryan to speak</a><a class="btn btn-line" href="{LINKEDIN}" rel="me">LinkedIn</a></div>
+  <div class="cta-row" style="margin-top:36px"><a class="btn btn-solid" href="{cal('leadership','bio')}" data-cta="bio-calendly">Book a call with Ryan</a><a class="btn btn-line" href="{c.L('speaking')}">Invite Ryan to speak</a><a class="btn btn-line" href="{TOUGHLEAF}">Project portfolio</a><a class="btn btn-line" href="{LINKEDIN}" rel="me">LinkedIn</a></div>
 </div></section>
 """ + foot(c)
 

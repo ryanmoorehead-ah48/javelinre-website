@@ -24,7 +24,7 @@ h2{font-size:clamp(25px,2.8vw,36px)}
 h3{font-size:clamp(18px,1.6vw,21px);letter-spacing:.1em}
 h4{font-size:16px;letter-spacing:.12em}
 /* Body copy: justified with hyphenation so the measure stays even */
-p{margin:0 0 1em;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+p{margin:0 0 1em;text-align:justify;text-justify:inter-word;hyphens:manual;-webkit-hyphens:manual}
 .lede{font-size:clamp(18px,1.5vw,20px);color:var(--slate);line-height:1.65}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
 .narrow{max-width:var(--text);margin-left:auto;margin-right:auto}
@@ -232,7 +232,7 @@ form .btn{justify-self:center;cursor:pointer;margin-top:6px}
   .stats div + div,.facts div + div{border-left:0;border-top:1px solid var(--rule)}
   .cap > div:nth-child(odd){border-right:0}
   .prose{font-size:19px}
-  p{hyphens:auto}
+  p{hyphens:manual}
 }
 @media print{
   .site-header,.site-footer,.band,.no-print{display:none!important}
@@ -243,7 +243,7 @@ form .btn{justify-self:center;cursor:pointer;margin-top:6px}
 /* v3 refinements */
 img{height:auto}
 /* Centered intros: justified, last line centered for symmetry, no hyphen breaks */
-.hero .lede,.page-head .lede,.head p,.band p,.narrow > p{text-align:justify;text-align-last:center;hyphens:auto;-webkit-hyphens:auto}
+.hero .lede,.page-head .lede,.head p,.band p,.narrow > p{text-align:justify;text-align-last:center;hyphens:manual;-webkit-hyphens:manual}
 /* Short blurbs inside narrow symmetric columns are centered (justifying 30-character lines leaves gaps) */
 .pillar p,.svc-link p,.steps p,.post p,.list span,.session p{text-align:center;hyphens:manual;-webkit-hyphens:manual}
 
@@ -290,3 +290,41 @@ img{height:auto}
 .hero h1{font-size:clamp(30px,3.7vw,50px);max-width:1040px}
 .hero h1{text-wrap:balance}
 .hero h1{font-size:clamp(28px,3.2vw,44px)}
+
+/* ---------- No hyphenated line breaks anywhere: whole words move to the next line ---------- */
+*,*::before,*::after{-webkit-hyphens:manual!important;hyphens:manual!important}
+body{overflow-wrap:normal;word-break:normal}
+/* Justified blocks on narrow screens can stretch word gaps; keep justification on wide screens only */
+@media (max-width:600px){
+  p{text-align:left;text-align-last:auto}
+  .hero .lede,.page-head .lede,.head p,.band p,.narrow > p,.pillar p,.svc-link p,.steps p,.post p,.session p{text-align:center;text-align-last:auto}
+}
+
+/* ---------- Phones: any width, either orientation ---------- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{overflow-x:hidden}
+img,svg,video,iframe{max-width:100%}
+.wrap{padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right))}
+.site-footer{padding-bottom:max(36px,env(safe-area-inset-bottom))}
+.btn{min-height:44px}
+.mobile-nav.open{max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);overflow-y:auto}
+input,select,textarea{font-size:16px}
+/* Landscape phones: short screens get tighter vertical spacing */
+@media (orientation:landscape) and (max-height:520px){
+  .bar{height:64px}
+  .brand img{height:40px}
+  .mobile-nav.open{max-height:calc(100vh - 64px);max-height:calc(100dvh - 64px)}
+  .hero{padding:28px 0 40px}
+  .hero .mark{width:min(220px,30vw);margin-bottom:16px}
+  .hero .tagline{margin-bottom:16px}
+  .section{padding:48px 0}
+  .page-head{padding:36px 0 32px}
+  .stats{grid-template-columns:repeat(3,1fr);margin-top:32px}
+  .stats div + div{border-left:1px solid var(--rule);border-top:0}
+  .calendly-inline-widget{height:520px!important}
+}
+/* Very small phones */
+@media (max-width:360px){
+  .btn{padding:15px 18px;font-size:12px}
+  h1{letter-spacing:.04em}
+}
