@@ -1,0 +1,185 @@
+# Javelin Residential — page content and SEO data (single source for the build)
+
+SITE = "https://www.javelinre.com"
+CAL = "https://calendly.com/ryan-arlorent/15-min-check-in-call"
+LINKEDIN = "https://www.linkedin.com/in/ryan-e-moorehead-8672352/"
+ADDRESS = {"street": "173 Huguenot Street, Suite 200", "city": "New Rochelle", "region": "NY", "zip": "10801"}
+EMAIL = "info@javelinre.com"
+AREA = ["New York City", "Westchester County", "New Jersey", "New York State"]
+
+PILLARS = [
+    ("Operate", "Keep units leased, residents served and the asset in good standing.",
+     ["property-management", "asset-management-compliance", "property-operations"]),
+    ("Build", "Plan, buy and deliver the physical work on time and on budget.",
+     ["construction-management", "construction-renovation", "procurement"]),
+    ("Organize", "Put the right people, structure and systems behind the property.",
+     ["staffing", "organizational-management", "data-technology"]),
+]
+
+SERVICES = {
+"property-management": dict(
+  name="Property Management",
+  title="Affordable Housing Property Management | Javelin",
+  desc="Property management for affordable and multifamily housing in NYC, Westchester and New Jersey: leasing, collections, resident services and maintenance oversight.",
+  h1="Property management for affordable and multifamily housing",
+  short="Leasing, collections, resident services and maintenance oversight for residential portfolios.",
+  lede="Day-to-day management that keeps units leased, rent collected and residents served, run by a team that has managed some of New York's largest residential communities.",
+  intro=["Good property management is a set of disciplines that have to work together every day: leasing that fills units quickly, collections that keep arrears under control, maintenance that answers the work order the first time, and compliance that never lets a file go stale. Javelin runs those disciplines as one operation and reports to owners in plain numbers.",
+         "We take on full management, step in as an interim manager during a transition, or manage a defined set of buildings alongside your existing team. Affordable, supportive and market-rate housing all follow the same operating playbook, adjusted for the regulatory agreement on each property."],
+  scope=["Leasing, marketing and applicant screening","Rent collection, arrears and legal coordination","Resident services and communications","Maintenance oversight and work-order management","Annual budgets and monthly owner reporting","Transitions from another managing agent"],
+  outcomes=["Higher occupancy and faster lease-up","Lower arrears and cleaner rent rolls","Work orders closed on first visit","Owner reports you can read in five minutes","A management transition with no gap in service"],
+  who="Owners of affordable, supportive and multifamily housing who want hands-on management with owner-level reporting, and owners changing managing agents.",
+  faqs=[("Do you manage affordable and market-rate buildings?","Yes. We manage under LIHTC, HUD, HPD and other regulatory agreements as well as market-rate housing, and we set up each property's compliance calendar on day one."),
+        ("Can you take over from another managing agent?","Yes. We run a structured transition: files, bank accounts, vendor contracts, staff and resident communication, so residents see no gap in service."),
+        ("How are management fees structured?","Typically a percentage of collected income or a flat monthly fee per property, set after a walkthrough. Book an intro call and we'll scope it.")],
+  related=["asset-management-compliance","property-operations","staffing"], pillar="Operate"),
+
+"asset-management-compliance": dict(
+  name="Asset Management & Compliance",
+  title="LIHTC & HUD Compliance, Asset Management | Javelin",
+  desc="Owner-side asset management and affordable housing compliance: LIHTC and HUD compliance, recertifications, file audits, MOR preparation, budgets and reporting.",
+  h1="Asset management and affordable housing compliance",
+  short="LIHTC and HUD compliance, recertifications, file audits, MOR preparation, budgets and reporting.",
+  lede="Owner-side oversight that protects value, financing and regulatory standing, offered as a monthly retainer or as defined projects such as pre-audit file reviews.",
+  intro=["Affordable housing owners answer to lenders, investors, syndicators and agencies at the same time. A missed recertification or an incomplete move-in file can put tax credits, subsidy and refinancing at risk. Javelin acts as the owner's asset manager: we watch the property's performance and its compliance, and we hold the managing agent to a standard.",
+         "Engagements usually start with a file and operations review that shows exactly where a property stands before an audit, a Management and Occupancy Review or a refinancing, followed by a plan to close every gap."],
+  scope=["LIHTC and HUD compliance oversight","Recertification tracking and file systems","Pre-audit move-in and recertification file reviews","Management and Occupancy Review (MOR) preparation","Budgets, variance reporting and capital planning","Due diligence for acquisitions and refinancings"],
+  outcomes=["Audit-ready files and a recertification calendar","A clear findings list with owners and dates","Fewer surprises at MORs and investor reviews","Monthly reporting that ties operations to the asset","A managing agent held to agreed standards"],
+  who="Nonprofit and for-profit owners of affordable housing, syndicators and asset managers who need fractional, senior oversight without a full-time hire.",
+  faqs=[("Do you offer one-time file reviews?","Yes. Pre-audit file reviews and MOR preparation are fixed-scope projects with a findings report and a corrective action plan."),
+        ("What does a monthly retainer cover?","Ongoing compliance oversight, monthly reporting review, budget and variance review, and regular calls with the owner and managing agent, at a flat monthly fee."),
+        ("Do you work alongside our current managing agent?","Usually, yes. We work on the owner's side and with the agent, not instead of it, unless you want management to change.")],
+  related=["property-management","organizational-management","data-technology"], pillar="Operate"),
+
+"property-operations": dict(
+  name="Property Operations",
+  title="Property Operations & NOI Improvement | Javelin",
+  desc="Operational assessments that raise NOI for multifamily and affordable housing: vacancy and unit-turn acceleration, payroll, service contracts and utility costs.",
+  h1="Property operations and NOI improvement",
+  short="Find the revenue and cost leaks inside a building and close them.",
+  lede="An operational assessment that finds where a property is losing money, followed by the hands-on work to recover it.",
+  intro=["Most underperforming properties don't need a new strategy. They need the basics run tightly: units turned and leased quickly, payroll matched to the work, service contracts priced at market and utilities managed. Javelin's operations work starts on site, with walkthroughs and file reviews, and ends with measurable changes to occupancy and expense.",
+         "We're particularly effective on properties with long-vacant units, where the delay is usually in the hand-offs between maintenance, leasing and compliance rather than in any single team."],
+  scope=["On-site operational assessment","Vacancy and unit-turn pipeline review","Payroll and staffing efficiency","Service contract and utility review","Collections and arrears process","Implementation support and follow-up"],
+  outcomes=["A ranked list of revenue and cost fixes","Shorter vacancy and turn times","Lower controllable expenses","Clear owners and deadlines for each fix","A reporting cadence that holds the gains"],
+  who="Owners and managers with properties that are under budget, carrying long-vacant units, or preparing for a sale or refinancing.",
+  faqs=[("How long does an assessment take?","Most single-property assessments take two to four weeks, including site visits and file reviews, and end with a written plan."),
+        ("Do you implement the plan or just recommend it?","Both. Many clients have us implement the plan through our construction, procurement and staffing services."),
+        ("What size properties do you work with?","From single buildings to multi-property portfolios with hundreds of units.")],
+  related=["construction-renovation","procurement","staffing"], pillar="Operate"),
+
+"construction-management": dict(
+  name="Construction Management",
+  title="Construction Management & Owner's Rep | Javelin",
+  desc="Owner's representation for multifamily and affordable housing capital projects: scoping, bid leveling, contractor selection, schedule and budget control.",
+  h1="Construction management and owner's representation",
+  short="Owner's representation from scope to closeout: capital planning, bidding, schedule and budget control.",
+  lede="We sit on the owner's side of the table on capital projects, so the scope is right, the bids compare cleanly and the job closes on time and on budget.",
+  intro=["Capital projects in occupied residential buildings carry risks that ground-up construction doesn't: residents in place, regulatory agreements, agency inspections and tight budgets. Javelin manages those projects for owners, from the first scope through bidding, construction and closeout.",
+         "We write the scope so contractors price the same job, level the bids, negotiate the contract, and then run the meetings, change orders, pay applications and punch lists until the work is done."],
+  scope=["Capital needs planning and budgeting","Scope of work and bid documents","Bid leveling and contractor selection","Contract negotiation","Schedule, budget and change-order control","Inspections, punch lists and closeout"],
+  outcomes=["Bids you can compare line by line","Change orders reviewed before they're approved","Pay applications tied to completed work","A project record ready for lenders and agencies","Resident disruption kept to a minimum"],
+  who="Owners with capital projects in occupied buildings: façade and roof work, systems replacements, common-area and unit renovations, and lender- or agency-required repairs.",
+  faqs=[("Are you a general contractor?","On owner's-rep engagements we are not the contractor; we represent the owner and manage the contractors. For unit turns and renovations, see Construction & Renovation."),
+        ("What size projects do you manage?","From single-building upgrades to multi-building capital programs."),
+        ("When should we bring you in?","As early as possible: the scope and bid stage is where most cost overruns are prevented.")],
+  related=["construction-renovation","procurement","asset-management-compliance"], pillar="Build"),
+
+"construction-renovation": dict(
+  name="Construction & Renovation",
+  title="Unit Turns & Multifamily Renovation | Javelin",
+  desc="Unit turns, make-readies, interior renovations, common-area upgrades and building-system repairs for multifamily and affordable housing owners.",
+  h1="Unit turns, renovation and building improvements",
+  short="Unit turns and make-readies, interior renovations, common-area upgrades and building-system repairs.",
+  lede="Delivery of the work itself, from a single make-ready to a building-wide upgrade, scoped and priced so vacant units come back online quickly.",
+  intro=["Vacant units earn nothing. Javelin delivers unit turns and renovations on a standard scope and price list, so work starts as soon as a unit is released and finishes on a predictable schedule. For larger work we manage qualified trade partners under one contract and one schedule.",
+         "Our construction work is tied to the leasing pipeline: we know which units are needed first and what the compliance team needs before move-in."],
+  scope=["Unit turns and make-readies","Kitchen and bath renovations","Flooring, paint and fixtures","Common-area and lobby upgrades","Building-system repairs","Punch lists and move-in readiness"],
+  outcomes=["A standard turn scope and price list","Predictable turn times","Units ready when leasing needs them","One point of contact for all trades","Photo documentation for owners and agencies"],
+  who="Owners and managers with vacant units waiting on turns, properties preparing for inspection, and buildings due for interior upgrades.",
+  faqs=[("Can you handle a backlog of vacant units?","Yes. We prioritize units with the leasing team and staff up to clear the backlog on an agreed schedule."),
+        ("Do you work in occupied buildings?","Yes. We plan access, noise and resident communication around occupied units."),
+        ("How is pricing set?","Unit turns are priced from a standard scope; larger work is priced per project after a walkthrough.")],
+  related=["construction-management","property-operations","procurement"], pillar="Build"),
+
+"procurement": dict(
+  name="Procurement",
+  title="Property Procurement & Vendor RFPs | Javelin",
+  desc="Procurement for residential real estate: vendor RFPs, service contract audits, contract negotiation and materials purchasing that lower operating costs.",
+  h1="Procurement and vendor management",
+  short="Vendor sourcing and RFPs, contract negotiation, service-contract audits and materials purchasing.",
+  lede="Strategic sourcing that lowers operating costs and makes vendors accountable, from a single service contract to a portfolio-wide rebid.",
+  intro=["Service contracts are one of the largest controllable expenses in a residential building, and many are renewed for years without being tested against the market. Javelin audits what you're paying, rewrites scopes so vendors price the same work, runs competitive RFPs and negotiates the contracts.",
+         "We also set up the purchasing rules, approvals and vendor files that keep costs in line after the rebid, which matters to auditors, lenders and agencies as much as to the budget."],
+  scope=["Service contract audits","Scopes and RFPs for elevators, waste, extermination, janitorial, security and more","Bid analysis and vendor selection","Contract negotiation and renewal terms","Materials and supply purchasing","Vendor compliance files and insurance tracking"],
+  outcomes=["Contracts priced against the market","Scopes with clear service levels","Clean vendor files for audits","Purchasing approvals that hold","Savings you can see in the operating budget"],
+  who="Owners and managers whose service contracts haven't been rebid in years, portfolios consolidating vendors, and organizations that need procurement policies.",
+  faqs=[("Which contracts do you usually rebid first?","Elevator maintenance, waste, extermination, janitorial and security are common starting points because they recur and are often above market."),
+        ("Can you write our procurement policy?","Yes. We write procurement and approval policies as part of our organizational management work."),
+        ("Do you take a share of savings?","Engagements are usually a flat project fee. Ask about alternatives on an intro call.")],
+  related=["property-operations","construction-management","organizational-management"], pillar="Build"),
+
+"staffing": dict(
+  name="Staffing",
+  title="Property Management Staffing | Javelin",
+  desc="Staffing for property management and affordable housing: staffing plans, recruiting and placement for site and leadership roles, and interim or fractional staff.",
+  h1="Staffing for property management teams",
+  short="Staffing plans, recruiting and placement for site and leadership roles, plus interim and fractional staff.",
+  lede="The right people in the right seats, from property managers and leasing agents to compliance specialists and senior leadership, including interim coverage while you hire.",
+  intro=["Vacancies in a site team show up quickly as vacant units, late recertifications and unanswered work orders. Javelin builds staffing plans that match roles to the work each property actually needs, recruits for those roles, and covers critical seats on an interim basis so operations don't stall.",
+         "We recruit from deep experience in New York's affordable and multifamily housing sector and screen for the compliance knowledge regulated properties require."],
+  scope=["Staffing plans and role design","Recruiting and placement","Interim property and compliance managers","Fractional senior leadership","Job descriptions and interview guides","Onboarding and training plans"],
+  outcomes=["A staffing plan matched to each property","Critical vacancies covered quickly","Candidates screened for compliance knowledge","Clear job descriptions and reporting lines","New hires productive sooner"],
+  who="Owners and management companies with open site or leadership roles, teams growing into new properties, and organizations restructuring their staffing.",
+  faqs=[("Which roles do you staff?","Property managers, community and leasing staff, compliance specialists, asset managers and senior operations leaders."),
+        ("Can you cover a role while we hire?","Yes. Interim and fractional coverage keeps recertifications, leasing and reporting moving."),
+        ("Do you also design the org chart?","Yes. See Organizational Management for structure, policies and reporting lines.")],
+  related=["organizational-management","property-management","asset-management-compliance"], pillar="Organize"),
+
+"organizational-management": dict(
+  name="Organizational Management",
+  title="Organizational Management for Housing | Javelin",
+  desc="Organizational management for housing organizations: policies and procedures, org design, reporting lines, performance management and consolidation.",
+  h1="Organizational management for housing organizations",
+  short="Policies and procedures, role definitions, reporting lines and performance management.",
+  lede="Structure, process and accountability for management teams that need to scale, consolidate or pass an audit.",
+  intro=["Many operating problems are organizational: nobody owns the hand-off, policies live in one person's head, or two departments do the same work. Javelin designs the structure, writes the policies and procedures, and sets up the reporting that makes accountability visible.",
+         "This work draws directly on experience consolidating a large, fragmented management operation into a single structure, and on running a New York City property management company."],
+  scope=["Organizational assessment","Org charts, roles and reporting lines","Policies and procedures manuals","Performance management and KPIs","Portfolio and department consolidation","Change management and training"],
+  outcomes=["Every function has a named owner","Written policies staff can follow","KPIs reviewed on a set cadence","Duplicate work removed","An organization ready to scale"],
+  who="Property management companies, nonprofit housing organizations and owners consolidating portfolios or preparing for growth, audits or new funding.",
+  faqs=[("Can you write our policies and procedures manual?","Yes, covering leasing, compliance, maintenance, procurement, finance and HR procedures for property operations."),
+        ("How do you handle staff during a restructuring?","We plan communication and training so staff understand the new structure and their role in it."),
+        ("Is this a one-time project?","It can be. Many clients keep a monthly retainer afterward to review KPIs and adjust.")],
+  related=["staffing","asset-management-compliance","procurement"], pillar="Organize"),
+
+"data-technology": dict(
+  name="Data & Technology",
+  title="Real Estate Data & PropTech Advisory | Javelin",
+  desc="Portfolio reporting, risk assessments and PropTech selection for housing owners, tying building-level operations to investment strategy.",
+  h1="Data, reporting and property technology",
+  short="Portfolio reporting, risk assessments and PropTech selection tied to investment strategy.",
+  lede="Reporting and technology that tie what happens in each building to the decisions owners make about the portfolio.",
+  intro=["Owners often have more data than insight: several systems, inconsistent reports and no single view of occupancy, collections, compliance and capital needs. Javelin builds portfolio reporting that answers the questions owners actually ask, and advises on technology for leasing, compliance and operations.",
+         "Our founder also co-founded Arlo, an AI-powered leasing and compliance platform for affordable housing, so our technology advice comes from building in this sector."],
+  scope=["Portfolio dashboards and KPIs","Monthly and quarterly owner reporting","Operational and compliance risk assessments","PropTech evaluation and selection","System implementation planning","Data cleanup and migration"],
+  outcomes=["One view of portfolio performance","Reports built around decisions","Risks identified before they become findings","Technology chosen for fit, not features","Cleaner data across systems"],
+  who="Owners and asset managers with multiple properties or systems, and organizations choosing new leasing, compliance or property management software.",
+  faqs=[("Do you sell software?","No. Our technology advice is independent. We help you choose what fits."),
+        ("Can you build our owner reports?","Yes, from your existing systems, with the KPIs and format your investors and lenders expect."),
+        ("Do you work with Yardi, RealPage or MRI?","We work from the data in whatever systems you use.")],
+  related=["asset-management-compliance","property-operations","organizational-management"], pillar="Organize"),
+}
+
+NAICS = [
+ ("531311","Residential Property Managers"),
+ ("531390","Other Activities Related to Real Estate"),
+ ("541611","Administrative Management and General Management Consulting Services"),
+ ("541618","Other Management Consulting Services"),
+ ("236118","Residential Remodelers"),
+ ("236116","New Multifamily Housing Construction (except For-Sale Builders)"),
+ ("561311","Employment Placement Agencies"),
+ ("561320","Temporary Help Services"),
+]
+
+CLIENTS = ["BRP Development","Belveron Partners","GRC Management","Rester","Arlo","APEX","Carthage Advisors","NPV Capital","LaCite Development"]
