@@ -139,10 +139,10 @@ EXPERTISE = [
      "Career highlight", "At GRC Management, Ryan grew the portfolio from 5,000 to more than 14,000 units in six years, rebuilding staffing, systems, compliance and reporting to carry a 400-person team."),
     ("LIHTC & HUD compliance", "Recertifications, file audits, MOR preparation and agency approvals",
      "What we do", "For a nonprofit affordable housing owner in Newark, NJ, Javelin runs LIHTC compliance and annual recertifications alongside asset management, staffing and written policies and procedures."),
-    ("Large-community leadership", "CEO of Parkchester, the 12,271-unit Bronx community",
-     "From Ryan's background", "As CEO of Parkchester, Ryan led 12,271 apartments, two condominium boards and 500,000 square feet of retail, and steered the property through a complex sponsor-led refinance."),
-    ("Capital programs", "$15M+ renovation program delivered $3M under budget",
-     "Career highlight", "Ryan created Parkchester's modernization program. More than $15 million in apartment renovations finished $3 million under budget, with revenue up more than 12% and ROI up 20.6%."),
+    ("Large-scale restructuring", "Led the organizational restructuring of a complex urban community with 700+ employees",
+     "From Ryan's background", "Ryan led the restructuring of a complex urban community: 700+ employees, 12,000+ apartments in two condominium structures with separate boards, a sponsor-led team, 500,000 SF of commercial and three parking garages."),
+    ("Capital programs", "$100M+ in capital projects across redevelopment, renovation and modernization",
+     "Career highlight", "Across his career, Ryan has led more than $100 million in capital work: redevelopment, apartment renovations and building-system modernization, including one renovation program delivered $3 million under budget."),
     ("Owners, agencies & nonprofits", "Housing authorities, community developers, investors and managing agents",
      "What we do", "For a Harlem affordable housing developer, Javelin prepared the managing-agent approval submission to the housing agency, from organizational documents to operating plans."),
   ]),
@@ -152,7 +152,7 @@ EXPERTISE = [
     ("Construction & procurement", "Scoping, bidding, contracting and delivering capital work in any built environment",
      "Outside real estate", "Ryan took Affogato House, a specialty coffee and gelato caf\u00e9 in New Rochelle, from raw space through design, contractor bids, construction, equipment and opening."),
     ("Organizational design & staffing", "Structure, policies, hiring and performance systems for teams of any size",
-     "Career highlight", "At Parkchester, Ryan consolidated a fragmented management structure under one leadership team. Those organizational changes helped grow ownership's profits by 60%."),
+     "Career highlight", "At a 12,000+ apartment community, Ryan consolidated fragmented management under one leadership team. Those organizational changes helped grow ownership's profits by 60%."),
     ("Regulated programs & contracts", "Running operations that answer to auditors, lenders, agencies and boards",
      "From Ryan's background", "Ryan's portfolios have answered to HUD, state housing agencies, lenders, auditors and condominium boards, often all at once, with reporting built to satisfy each of them."),
     ("Technology & finance", "AI company founder; asset management and lending experience; P&L and capital stewardship",
@@ -233,7 +233,7 @@ def p_home(c):
     </div>
     <div class="stats">
       <div><strong>14,000+ units</strong><span>affordable and market-rate portfolio grown and managed</span></div>
-      <div><strong>$15M+ renovation</strong><span>program delivered $3M under budget</span></div>
+      <div><strong>$100M+ capital projects</strong><span>redevelopment, renovation and building-system modernization</span></div>
       <div><strong>20+ years</strong><span>in development, asset management and operations</span></div>
     </div>
   </div>
@@ -280,7 +280,7 @@ def p_home(c):
     <div>
       <h2>Leadership</h2>
       <p class="role">Ryan Moorehead, Founder &amp; Principal</p>
-      <p>Ryan has spent more than twenty years running and repositioning residential real estate. As President of GRC Management from 2019 to 2025, he restructured a 49-year-old New York City management company and grew its portfolio from 5,000 to more than 14,000 affordable and market-rate units. Before that, as Head of Residential at Olshan Properties, he was CEO of Parkchester, the 12,271-unit Bronx community. Since 2013 he has been a real estate career coach at Columbia University.</p>
+      <p>Ryan has spent more than twenty years running and repositioning residential real estate. As President of GRC Management from 2019 to 2025, he restructured a 49-year-old New York City management company and grew its portfolio from 5,000 to more than 14,000 affordable and market-rate units. Before that, as Head of Residential at Olshan Properties, he led the organizational restructuring of a 12,000+ apartment urban community with 700+ employees. Since 2013 he has been a real estate career coach at Columbia University.</p>
       <ul class="creds"><li>GlobeSt.com Top 50 Under 40 (2016)</li><li>MBA, Columbia Business School</li><li>B.S. Real Estate, NYU, magna cum laude</li><li>Member, REEC, NYREC and ULI</li></ul>
       <div class="cta-row" style="justify-content:flex-start"><a class="btn btn-line" href="{c.L('leadership')}">Read Ryan's bio</a><a class="btn btn-line" href="{c.L('speaking')}">Invite Ryan to speak</a></div>
     </div>
@@ -356,13 +356,13 @@ def p_capabilities(c):
     <div><h2>Core competencies</h2><ul class="ticks">{comp}</ul></div>
     <div><h2>Differentiators</h2><ul class="ticks">
       <li>One accountable team across operations, construction, procurement and staffing</li>
-      <li>Leadership that grew a NYC portfolio to 14,000+ units and ran the 12,271-unit Parkchester community</li><li>Capital programs delivered under budget: $15M+ renovation program, $3M under</li>
+      <li>Leadership that grew a NYC portfolio to 14,000+ units and restructured a 700+ employee urban community</li><li>$100M+ in capital projects: redevelopment, apartment renovations and building-system modernization</li>
       <li>Deep LIHTC, HUD and agency compliance experience</li>
       <li>Flat-fee retainers and fixed-scope projects, no hourly billing</li>
       <li>Technology fluency from co-founding an affordable housing leasing and compliance platform</li></ul></div>
     <div><h2>Past performance</h2><ul class="ticks">
       <li><b>GRC Management, New York City</b> (President, April 2019&ndash;October 2025): restructured and modernized a 49-year-old full-service management company; grew the portfolio from 5,000 to 14,000+ affordable and market-rate units with 400+ employees</li>
-      <li><b>Parkchester, Bronx</b> (CEO, for Olshan Properties, 2012&ndash;2017): 12,271-unit development with two condominium boards and 500,000 sq. ft. of retail; $15M+ apartment renovation program completed $3M under budget, revenue up 12%, ROI up 20.6%, ownership profits up 60%; complex sponsor-led refinance</li>
+      <li><b>Large urban residential community, Bronx</b> (Head of Residential, Olshan Properties, 2012&ndash;2017): organizational restructuring of 700+ employees; 12,000+ apartments in two condominium structures with separate governing boards, a sponsor-led team, 500,000 sq. ft. of commercial and three parking garages; renovation program delivered $3M under budget, ownership profits up 60%; sponsor-led refinance</li>
       <li><b>Nonprofit affordable housing owner, Newark, NJ</b> (Javelin, 2026&ndash;present): asset management, staffing, policies and procedures, LIHTC compliance and recertifications</li>
       <li><b>Harlem affordable housing developer</b> (Javelin, 2026): managing-agent agency approval submission</li>
       <li><b>Workforce housing firms</b> (consultant): property and asset management reporting packages and standard operating procedures</li>
@@ -398,7 +398,7 @@ def p_leadership(c):
               "alumniOf":[{"@type":"CollegeOrUniversity","name":"Columbia Business School"},{"@type":"CollegeOrUniversity","name":"New York University"}],
               "award":"GlobeSt.com Top 50 Under 40 (2016)","memberOf":[{"@type":"Organization","name":"REEC"},{"@type":"Organization","name":"NYREC"},{"@type":"Organization","name":"Urban Land Institute"}],"knowsAbout":["Affordable housing","Asset management","LIHTC compliance","Property management","Construction management"]}
     return head(c, "Ryan Moorehead, Founder | Javelin Residential",
-      "Ryan Moorehead: 20+ years in residential real estate; grew GRC Management to 14,000+ units; former CEO of Parkchester; Columbia career coach since 2013.",
+      "Ryan Moorehead: 20+ years in residential real estate; grew GRC Management to 14,000+ units; $100M+ in capital projects; Columbia career coach since 2013.",
       [crumbs_schema(items), person], "profile") + f"""
 <section class="page-head"><div class="wrap">{crumbs_html(c,items)}
   <h1>Ryan Moorehead</h1><hr class="divider">
@@ -416,8 +416,9 @@ def p_leadership(c):
     <p>His path into real estate was not a straight line. Ryan grew up in Oakland, California, and started college at UC Berkeley, where he played football. He left to study music theory and sound design in Arizona, then began his career at Sony Music, working his way from intern to signing an artist from his hometown while taking classes at NYU at night. It was at NYU that he found real estate. He moved to The Richman Group, where he developed a lasting interest in affordable housing, and interned at AvalonBay while in graduate school. He graduated from NYU with a B.S. in Real Estate, magna cum laude, and holds an MBA from Columbia Business School.</p>
     <h2>Asset management and turnarounds</h2>
     <p>From 2010 to 2012, as Vice President of Asset Management and Business Development at First Sterling Financial (now Regents Bank), Ryan grew the firm by turning its asset management platform into a third-party management business, while managing risk across an asset-based portfolio with a focus on cost control. He was instrumental in loan negotiations that reduced the number of non-performing assets in the portfolio. He also consulted for workforce housing firms, building their property and asset management reporting packages and standard operating procedures.</p>
-    <h2>Parkchester</h2>
-    <p>From 2012 to 2017, Ryan was Head of Residential for Olshan Properties, a privately owned New York real estate firm with a $2 billion multifamily portfolio. In that role he was CEO of Parkchester in the Bronx, a 12,271-unit development with two condominium boards and 500,000 square feet of retail. He created a modernization program and oversaw more than $15 million in apartment renovations, finishing $3 million under budget while lifting revenue more than 12 percent and ROI by 20.6 percent. His value-add strategies, operational efficiencies and organizational changes grew ownership's profits by 60 percent, and he led the complex, sponsor-led refinancing of Parkchester, Olshan's premier residential asset, while managing teams across multiple states.</p>
+    <h2>Large-scale urban restructuring</h2>
+    <p>From 2012 to 2017, Ryan was Head of Residential for Olshan Properties, a privately owned New York real estate firm with a $2 billion multifamily portfolio. In that role he led the organizational restructuring of a large, complex urban community: more than 700 employees, over 12,000 apartments in two condominium structures with separate governing boards, a sponsor-led team, 500,000 square feet of commercial space and three parking garages. He created a modernization program whose apartment renovations finished $3 million under budget while lifting revenue more than 12 percent and ROI by 20.6 percent. His value-add strategies, operational efficiencies and organizational changes grew ownership's profits by 60 percent, and he led a complex sponsor-led refinancing while managing teams across multiple states.</p>
+    <p>Across his career, Ryan has led more than $100 million in capital projects spanning redevelopment, apartment renovations and building-system modernization.</p>
     <p class="pull">The most valuable fixes in a building are usually organizational: who owns the hand-off, who signs the contract, who checks the file.</p>
     <h2>GRC Management</h2>
     <p>From April 2019 to October 2025, Ryan served as President of GRC Management, a 49-year-old full-service residential property management company in New York City, which he partnered with to restructure and modernize. He grew its portfolio from 5,000 to more than 14,000 units of affordable and market-rate housing, with more than 400 employees across the portfolio. That work, rebuilding staffing, systems, compliance and reporting at scale, is the foundation of Javelin's practice today. He stepped away from GRC in October 2025 to focus on Javelin and Arlo.</p>
@@ -472,9 +473,9 @@ def p_speaking(c):
     topics = [
       ("Affordable housing operations at scale","How a NYC management company grew from 5,000 to 14,000+ units: staffing, systems, compliance and the decisions that held it together."),
       ("AI and technology in affordable housing","What AI can and can't do for leasing, income certification and compliance, from the co-founder of an affordable housing leasing platform."),
-      ("Value-add in occupied buildings","Lessons from a $15M+ renovation program at Parkchester delivered $3M under budget, with residents in place."),
+      ("Value-add in occupied buildings","Lessons from $100M+ in capital work, including a renovation program delivered $3M under budget with residents in place."),
       ("Turning around a property organization","Consolidating fragmented management, writing the playbook, and building teams that own the hand-offs."),
-      ("Building a career in real estate","From Sony Music to running a 12,271-unit community, and more than a decade coaching MBA students at Columbia."),
+      ("Building a career in real estate","From Sony Music to restructuring a 700-person urban community, and more than a decade coaching MBA students at Columbia."),
       ("Procurement and the cost of operations","Where operating budgets leak, and how owners recover it through vendors, staffing and capital planning."),
     ]
     faqs = [("What formats does Ryan do?","Keynotes, panels, moderated discussions, fireside chats, workshops, podcasts and university guest lectures, in person or virtual."),
@@ -488,14 +489,14 @@ def p_speaking(c):
     tr = "".join(f'<div class="svc-link"><h4>{E(t)}</h4><p>{E(d)}</p></div>' for t,d in topics[half:])
     short_bio = ("Ryan Moorehead is the Founder of Javelin Residential and co-founder of Arlo, an AI-powered leasing and compliance platform for affordable housing. "
                  "As President of GRC Management from 2019 to 2025, he grew a New York City portfolio from 5,000 to more than 14,000 affordable and market-rate units. "
-                 "Previously, as Head of Residential at Olshan Properties, he was CEO of Parkchester, the 12,271-unit Bronx community, where he delivered a $15M+ renovation program $3M under budget. "
+                 "Previously, as Head of Residential at Olshan Properties, he led the organizational restructuring of a 12,000+ apartment urban community with 700+ employees. Across his career he has led more than $100M in capital projects. "
                  "A GlobeSt.com Top 50 Under 40 honoree, he has been a real estate career coach for Columbia University since 2013 and holds an MBA from Columbia Business School and a B.S. in Real Estate from NYU.")
     return head(c, "Book Ryan Moorehead to Speak | Javelin Residential",
       "Invite Ryan Moorehead to speak at your conference, panel or podcast on affordable housing operations, AI and PropTech, and real estate careers.",
       [crumbs_schema(items), svc, faq_schema(faqs)]) + f"""
 <section class="page-head"><div class="wrap">{crumbs_html(c,items)}
   <h1>Speaking engagements</h1><hr class="divider">
-  <p class="lede">Looking for Ryan to speak at a conference, sit on a panel or join a podcast? He brings two decades of operating experience, from running the 12,271-unit Parkchester community to growing a NYC portfolio past 14,000 units, and the perspective of a proptech founder.</p>
+  <p class="lede">Looking for Ryan to speak at a conference, sit on a panel or join a podcast? He brings two decades of operating experience, from restructuring a 700+ employee urban community to growing a NYC portfolio past 14,000 units, and the perspective of a proptech founder.</p>
   <div class="cta-row"><a class="btn btn-solid" href="#request">Request Ryan for an event</a><a class="btn btn-line" href="{cal('speaking','head')}" data-cta="speaking-calendly">Book a 15-minute call</a></div>
 </div></section>
 <section class="section"><div class="wrap">

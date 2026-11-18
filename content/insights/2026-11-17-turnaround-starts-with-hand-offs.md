@@ -9,7 +9,7 @@ slug: turnaround-starts-with-hand-offs
 
 When a property management organization is struggling, the first instinct is to redraw the org chart. New titles, new reporting lines, maybe a new department. In my experience the chart is rarely the problem. The problem lives in the spaces between the boxes: the hand-off from leasing to compliance, from maintenance to leasing, from the site to accounting.
 
-At Parkchester and later at GRC Management, the biggest gains didn't come from reorganizing people. They came from deciding, for every recurring task, who owns it at each moment and what "done" means before it moves to the next person.
+In large-community restructurings and later at GRC Management, the biggest gains didn't come from reorganizing people. They came from deciding, for every recurring task, who owns it at each moment and what "done" means before it moves to the next person.
 
 ## Three questions for every process
 

@@ -17,7 +17,7 @@ It starts small. Recertifications fall behind, so subsidy payments are delayed. 
 
 **A compliance calendar that runs itself.** Every certification date, inspection and report tracked, with files reviewed before they're due.
 
-**Capital planning tied to operations.** Renovations scheduled around turnover, priced against a standard scope and managed to budget. At Parkchester, a $15 million-plus apartment renovation program finished $3 million under budget because scope and procurement were disciplined from the start.
+**Capital planning tied to operations.** Renovations scheduled around turnover, priced against a standard scope and managed to budget. On one large urban community, an apartment renovation program finished $3 million under budget because scope and procurement were disciplined from the start.
 
 **Staffing matched to the work.** Regulated properties need people who understand the rules, and enough of them to keep up.
 
