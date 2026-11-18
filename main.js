@@ -55,4 +55,14 @@
         .catch(mailto);
     });
   });
+  // expertise flip tiles
+  document.querySelectorAll('.flip').forEach(function (t) {
+    t.addEventListener('click', function () {
+      var on = t.classList.toggle('on');
+      t.setAttribute('aria-pressed', on ? 'true' : 'false');
+      t.querySelector('.front').setAttribute('aria-hidden', on ? 'true' : 'false');
+      t.querySelector('.back').setAttribute('aria-hidden', on ? 'false' : 'true');
+      if (window.dataLayer && on) window.dataLayer.push({ event: 'expertise_flip', tile: t.querySelector('strong').textContent });
+    });
+  });
 })();

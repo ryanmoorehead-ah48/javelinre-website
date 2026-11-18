@@ -133,6 +133,42 @@ def clients_block(c, tint=False):
   <ul class="clients">{cells}</ul>
 </div></section>"""
 
+EXPERTISE = [
+  ("Residential expertise", [
+    ("Affordable & multifamily operations", "Grew a NYC portfolio to 14,000+ affordable and market-rate units with 400+ employees",
+     "Career highlight", "At GRC Management, Ryan grew the portfolio from 5,000 to more than 14,000 units in six years, rebuilding staffing, systems, compliance and reporting to carry a 400-person team."),
+    ("LIHTC & HUD compliance", "Recertifications, file audits, MOR preparation and agency approvals",
+     "What we do", "For a nonprofit affordable housing owner in Newark, NJ, Javelin runs LIHTC compliance and annual recertifications alongside asset management, staffing and written policies and procedures."),
+    ("Large-community leadership", "CEO of Parkchester, the 12,271-unit Bronx community",
+     "From Ryan's background", "As CEO of Parkchester, Ryan led 12,271 apartments, two condominium boards and 500,000 square feet of retail, and steered the property through a complex sponsor-led refinance."),
+    ("Capital programs", "$15M+ renovation program delivered $3M under budget",
+     "Career highlight", "Ryan created Parkchester's modernization program. More than $15 million in apartment renovations finished $3 million under budget, with revenue up more than 12% and ROI up 20.6%."),
+    ("Owners, agencies & nonprofits", "Housing authorities, community developers, investors and managing agents",
+     "What we do", "For a Harlem affordable housing developer, Javelin prepared the managing-agent approval submission to the housing agency, from organizational documents to operating plans."),
+  ]),
+  ("Transferable skills", [
+    ("Turnarounds & scaling", "Restructuring organizations and nearly tripling an operation's size without losing control",
+     "From Ryan's background", "Ryan partnered with a 49-year-old management company to restructure and modernize it, then nearly tripled its size while keeping service, compliance and reporting on track."),
+    ("Construction & procurement", "Scoping, bidding, contracting and delivering capital work in any built environment",
+     "Outside real estate", "Ryan took Affogato House, a specialty coffee and gelato caf\u00e9 in New Rochelle, from raw space through design, contractor bids, construction, equipment and opening."),
+    ("Organizational design & staffing", "Structure, policies, hiring and performance systems for teams of any size",
+     "Career highlight", "At Parkchester, Ryan consolidated a fragmented management structure under one leadership team. Those organizational changes helped grow ownership's profits by 60%."),
+    ("Regulated programs & contracts", "Running operations that answer to auditors, lenders, agencies and boards",
+     "From Ryan's background", "Ryan's portfolios have answered to HUD, state housing agencies, lenders, auditors and condominium boards, often all at once, with reporting built to satisfy each of them."),
+    ("Technology & finance", "AI company founder; asset management and lending experience; P&L and capital stewardship",
+     "From Ryan's background", "Ryan co-founded Arlo, an AI leasing and compliance platform for affordable housing. At First Sterling Financial he negotiated loans that cut non-performing assets."),
+  ]),
+]
+def flip_tiles():
+    out = ""
+    for col, tiles in EXPERTISE:
+        out += f'<h3 class="flip-head">{E(col)}</h3>'
+        for t, front, label, back in tiles:
+            out += (f'<button type="button" class="flip" aria-pressed="false" aria-label="{E(t)}: show example">'
+                    f'<span class="flip-inner"><span class="face front"><strong>{E(t)}</strong><span class="txt">{E(front)}</span><span class="cue">See an example</span></span>'
+                    f'<span class="face back" aria-hidden="true"><span class="label">{E(label)}</span><span class="txt">{E(back)}</span><span class="cue">Flip back</span></span></span></button>')
+    return f'<div class="flipgrid">{out}</div>'
+
 SAMPLES = [
   ("Management audit", "An operating review of a residential management company: options analysis with costs, then recommendations organized by function.",
    [("management-audit-options","Options and findings"),("management-audit-recommendations","Recommendations")]),
@@ -214,28 +250,7 @@ def p_home(c):
   <div class="wrap">
     <div class="head"><h2>Residential depth. Cross-industry reach.</h2><hr class="divider">
       <p class="lede">Two decades running some of New York's largest residential portfolios built skills that work in any organization with people, buildings, budgets and rules to answer to.</p></div>
-    <div class="duo">
-      <div>
-        <div class="head" style="margin-bottom:24px"><h3>Residential expertise</h3></div>
-        <ul class="list">
-          <li><strong>Affordable & multifamily operations</strong><span>Grew a NYC portfolio to 14,000+ affordable and market-rate units with 400+ employees</span></li>
-          <li><strong>LIHTC & HUD compliance</strong><span>Recertifications, file audits, MOR preparation and agency approvals</span></li>
-          <li><strong>Large-community leadership</strong><span>CEO of Parkchester, the 12,271-unit Bronx community</span></li>
-          <li><strong>Capital programs</strong><span>$15M+ renovation program delivered $3M under budget</span></li>
-          <li><strong>Owners, agencies & nonprofits</strong><span>Housing authorities, community developers, investors and managing agents</span></li>
-        </ul>
-      </div>
-      <div>
-        <div class="head" style="margin-bottom:24px"><h3>Transferable skills</h3></div>
-        <ul class="list">
-          <li><strong>Turnarounds & scaling</strong><span>Restructuring organizations and nearly tripling an operation's size without losing control</span></li>
-          <li><strong>Construction & procurement</strong><span>Scoping, bidding, contracting and delivering capital work in any built environment</span></li>
-          <li><strong>Organizational design & staffing</strong><span>Structure, policies, hiring and performance systems for teams of any size</span></li>
-          <li><strong>Regulated programs & contracts</strong><span>Running operations that answer to auditors, lenders, agencies and boards</span></li>
-          <li><strong>Technology & finance</strong><span>AI company founder; asset management and lending experience; P&L and capital stewardship</span></li>
-        </ul>
-      </div>
-    </div>
+    {flip_tiles()}
     <div class="head" style="margin:72px auto 28px"><h3>Industries we bring them to</h3></div>
     <ul class="clients industries">
       <li>Hospitality & food service</li><li>Commercial & mixed-use</li><li>Technology & startups</li>
