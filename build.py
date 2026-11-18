@@ -152,7 +152,7 @@ EXPERTISE = [
     ("Construction & procurement", "Scoping, bidding, contracting and delivering capital work in any built environment",
      "Outside real estate", "Ryan took Affogato House, a specialty coffee and gelato caf\u00e9 in New Rochelle, from raw space through design, contractor bids, construction, equipment and opening."),
     ("Organizational design & staffing", "Structure, policies, hiring and performance systems for teams of any size",
-     "Career highlight", "At a 12,000+ apartment community, Ryan consolidated fragmented management under one leadership team. Those organizational changes helped grow ownership's profits by 60%."),
+     "Career highlight", "Ryan rightsized a management company's staff from 160 to 100, built a clear reporting structure, job descriptions, training and an operations procedures manual, and made key hires that reset the culture."),
     ("Regulated programs & contracts", "Running operations that answer to auditors, lenders, agencies and boards",
      "From Ryan's background", "Ryan's portfolios have answered to HUD, state housing agencies, lenders, auditors and condominium boards, often all at once, with reporting built to satisfy each of them."),
     ("Technology & finance", "AI company founder; asset management and lending experience; P&L and capital stewardship",
@@ -280,7 +280,7 @@ def p_home(c):
     <div>
       <h2>Leadership</h2>
       <p class="role">Ryan Moorehead, Founder &amp; Principal</p>
-      <p>Ryan has spent more than twenty years running and repositioning residential real estate. As President of GRC Management from 2019 to 2025, he restructured a 49-year-old New York City management company and grew its portfolio from 5,000 to more than 14,000 affordable and market-rate units. Before that, as Head of Residential at Olshan Properties, he led the organizational restructuring of a 12,000+ apartment urban community with 700+ employees. Since 2013 he has been a real estate career coach at Columbia University.</p>
+      <p>Ryan has spent more than twenty years running and repositioning residential real estate. As President of GRC Management from 2019 to 2025, he restructured a 49-year-old New York City management company and grew its portfolio from 5,000 to more than 14,000 affordable and market-rate units. Before that, he led the organizational restructuring of a 12,000+ apartment urban community with 700+ employees. Since 2013 he has been a real estate career coach at Columbia University.</p>
       <ul class="creds"><li>GlobeSt.com Top 50 Under 40 (2016)</li><li>MBA, Columbia Business School</li><li>B.S. Real Estate, NYU, magna cum laude</li><li>Member, REEC, NYREC and ULI</li></ul>
       <div class="cta-row" style="justify-content:flex-start"><a class="btn btn-line" href="{c.L('leadership')}">Read Ryan's bio</a><a class="btn btn-line" href="{c.L('speaking')}">Invite Ryan to speak</a></div>
     </div>
@@ -362,7 +362,7 @@ def p_capabilities(c):
       <li>Technology fluency from co-founding an affordable housing leasing and compliance platform</li></ul></div>
     <div><h2>Past performance</h2><ul class="ticks">
       <li><b>GRC Management, New York City</b> (President, April 2019&ndash;October 2025): restructured and modernized a 49-year-old full-service management company; grew the portfolio from 5,000 to 14,000+ affordable and market-rate units with 400+ employees</li>
-      <li><b>Large urban residential community, Bronx</b> (Head of Residential, Olshan Properties, 2012&ndash;2017): organizational restructuring of 700+ employees; 12,000+ apartments in two condominium structures with separate governing boards, a sponsor-led team, 500,000 sq. ft. of commercial and three parking garages; renovation program delivered $3M under budget, ownership profits up 60%; sponsor-led refinance</li>
+      <li><b>Large urban residential community, Bronx</b> (Executive leadership, 2012&ndash;2017): organizational restructuring of 700+ employees; 12,000+ apartments in two condominium structures with separate governing boards, a sponsor-led team, 500,000 sq. ft. of commercial and three parking garages; renovation program delivered $3M under budget, ownership profits up 60%; sponsor-led refinance</li>
       <li><b>Nonprofit affordable housing owner, Newark, NJ</b> (Javelin, 2026&ndash;present): asset management, staffing, policies and procedures, LIHTC compliance and recertifications</li>
       <li><b>Harlem affordable housing developer</b> (Javelin, 2026): managing-agent agency approval submission</li>
       <li><b>Workforce housing firms</b> (consultant): property and asset management reporting packages and standard operating procedures</li>
@@ -417,7 +417,7 @@ def p_leadership(c):
     <h2>Asset management and turnarounds</h2>
     <p>From 2010 to 2012, as Vice President of Asset Management and Business Development at First Sterling Financial (now Regents Bank), Ryan grew the firm by turning its asset management platform into a third-party management business, while managing risk across an asset-based portfolio with a focus on cost control. He was instrumental in loan negotiations that reduced the number of non-performing assets in the portfolio. He also consulted for workforce housing firms, building their property and asset management reporting packages and standard operating procedures.</p>
     <h2>Large-scale urban restructuring</h2>
-    <p>From 2012 to 2017, Ryan was Head of Residential for Olshan Properties, a privately owned New York real estate firm with a $2 billion multifamily portfolio. In that role he led the organizational restructuring of a large, complex urban community: more than 700 employees, over 12,000 apartments in two condominium structures with separate governing boards, a sponsor-led team, 500,000 square feet of commercial space and three parking garages. He created a modernization program whose apartment renovations finished $3 million under budget while lifting revenue more than 12 percent and ROI by 20.6 percent. His value-add strategies, operational efficiencies and organizational changes grew ownership's profits by 60 percent, and he led a complex sponsor-led refinancing while managing teams across multiple states.</p>
+    <p>From 2012 to 2017, Ryan held a senior executive role with a privately owned New York real estate firm with a $2 billion multifamily portfolio. There he led the organizational restructuring of a large, complex urban community: more than 700 employees, over 12,000 apartments in two condominium structures with separate governing boards, a sponsor-led team, 500,000 square feet of commercial space and three parking garages. He created a modernization program whose apartment renovations finished $3 million under budget while lifting revenue more than 12 percent and ROI by 20.6 percent. His value-add strategies, operational efficiencies and organizational changes grew ownership's profits by 60 percent, and he led a complex sponsor-led refinancing while managing teams across multiple states.</p>
     <p>Across his career, Ryan has led more than $100 million in capital projects spanning redevelopment, apartment renovations and building-system modernization.</p>
     <p class="pull">The most valuable fixes in a building are usually organizational: who owns the hand-off, who signs the contract, who checks the file.</p>
     <h2>GRC Management</h2>
@@ -489,7 +489,7 @@ def p_speaking(c):
     tr = "".join(f'<div class="svc-link"><h4>{E(t)}</h4><p>{E(d)}</p></div>' for t,d in topics[half:])
     short_bio = ("Ryan Moorehead is the Founder of Javelin Residential and co-founder of Arlo, an AI-powered leasing and compliance platform for affordable housing. "
                  "As President of GRC Management from 2019 to 2025, he grew a New York City portfolio from 5,000 to more than 14,000 affordable and market-rate units. "
-                 "Previously, as Head of Residential at Olshan Properties, he led the organizational restructuring of a 12,000+ apartment urban community with 700+ employees. Across his career he has led more than $100M in capital projects. "
+                 "Previously, he led the organizational restructuring of a 12,000+ apartment urban community with 700+ employees. Across his career he has led more than $100M in capital projects. "
                  "A GlobeSt.com Top 50 Under 40 honoree, he has been a real estate career coach for Columbia University since 2013 and holds an MBA from Columbia Business School and a B.S. in Real Estate from NYU.")
     return head(c, "Book Ryan Moorehead to Speak | Javelin Residential",
       "Invite Ryan Moorehead to speak at your conference, panel or podcast on affordable housing operations, AI and PropTech, and real estate careers.",
