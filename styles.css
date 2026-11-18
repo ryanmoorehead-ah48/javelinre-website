@@ -328,3 +328,49 @@ input,select,textarea{font-size:16px}
   .btn{padding:15px 18px;font-size:12px}
   h1{letter-spacing:.04em}
 }
+
+
+/* ==== LAYOUT: Full-screen panels (Option B, chosen Nov 2026) ====
+    "Full-screen panels" — edge-to-edge composition: a full-height hero with the javelin
+   figure as a large watermark, sections as full-width panels, and a split leadership panel. */
+:root{--max:none;--gutter:clamp(20px,4vw,72px);--text:780px}
+.bar{height:96px}
+.nav-l{justify-content:flex-start}
+.nav-r{justify-content:flex-end}
+/* hero fills the screen; the figure becomes a watermark spanning the width */
+.hero{min-height:calc(100vh - 96px);min-height:calc(100svh - 96px);display:flex;align-items:center;position:relative;overflow:hidden;padding:clamp(48px,6vw,96px) 0}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero::before{content:"";position:absolute;inset:6% -4% auto -4%;height:88%;background:url("assets/javelin-mark-navy.png") center/contain no-repeat;opacity:.06;pointer-events:none}
+.hero .mark{display:none}
+.hero .brandline{font-size:clamp(24px,2.4vw,40px)}
+.hero h1{font-size:clamp(32px,4.4vw,76px);max-width:none}
+.hero .catch{font-size:clamp(20px,1.8vw,30px)}
+.hero .lede{max-width:900px}
+.stats{max-width:1400px;margin-left:auto;margin-right:auto}
+/* services: three equal full-height panels edge to edge */
+#services .wrap{padding:0}
+#services .head{padding:0 var(--gutter)}
+.pillars{border-top:1px solid var(--rule)}
+.pillar{padding:clamp(40px,4vw,72px) clamp(24px,3vw,64px)}
+.pillar:nth-child(2){background:var(--mist)}
+/* leadership: photo fills the left half to the screen edge */
+.leader{grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.section .leader{max-width:none;padding:0}
+.section:has(.leader){padding:0}
+.leader .portrait{max-width:none;aspect-ratio:auto;height:100%;min-height:640px;justify-self:stretch}
+.leader > div:last-child{padding:clamp(48px,6vw,112px) clamp(24px,6vw,120px);align-self:center;max-width:760px}
+.posts{max-width:1500px;margin:0 auto}
+.duo,.contact,.sessions,.scope{max-width:1400px;margin-left:auto;margin-right:auto}
+.cap{max-width:1400px;margin-left:auto;margin-right:auto}
+@media (max-width:1040px){
+  .leader{grid-template-columns:1fr}
+  .leader .portrait{min-height:0;aspect-ratio:4/5;max-width:520px;justify-self:center}
+  .pillar:nth-child(2){background:none}
+}
+
+/* industries grid (3 x 2) */
+.clients.industries{grid-template-columns:repeat(3,1fr);max-width:1100px}
+.clients.industries li{font-size:16px;min-height:88px}
+#expertise .duo h3{font-size:clamp(20px,1.8vw,26px)}
+@media (max-width:720px){.clients.industries{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.clients.industries{grid-template-columns:1fr}}

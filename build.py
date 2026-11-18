@@ -155,7 +155,7 @@ def contact_form(campaign):
 def p_home(c):
     posts = posts_html(c, 3)
     return head(c, "Javelin Residential | Innovative Real Estate Solutions",
-      "Innovative real estate solutions: property operations, compliance, construction, procurement and staffing for affordable and multifamily housing in NYC, Westchester and NJ.",
+      "Innovative real estate solutions: operations, compliance, construction, procurement and staffing for housing owners, plus turnaround and operating expertise for other industries.",
       []) + f"""
 <section class="hero">
   <div class="wrap">
@@ -165,7 +165,7 @@ def p_home(c):
     <h1>Where Vision Takes Flight<br> and Precision Hits the Mark.</h1>
     <p class="catch">The Right Aim. The Perfect Trajectory. Exceptional Results.</p>
     <hr class="divider">
-    <p class="lede">Javelin Residential manages, builds, staffs and sources for affordable and multifamily housing owners. One accountable team, from the leasing office to the boiler room, serving New York City, Westchester and New Jersey.</p>
+    <p class="lede">Javelin Residential manages, builds, staffs and sources for affordable and multifamily housing owners, and brings the same operating discipline to organizations in hospitality, technology, finance and the public sector. One accountable team, based in New Rochelle and serving New York City, Westchester, New Jersey and beyond.</p>
     <div class="cta-row">
       <a class="btn btn-solid" href="{cal('home','hero')}" data-cta="hero-calendly">Book a 15-minute call</a>
       <a class="btn btn-line" href="{c.L('capabilities')}">View capability statement</a>
@@ -185,26 +185,37 @@ def p_home(c):
     {pillars(c)}
   </div>
 </section>
-<section class="section tint">
-  <div class="wrap duo">
-    <div>
-      <div class="head" style="margin-bottom:28px"><h2>Who we work with</h2><hr class="divider"></div>
-      <ul class="list">
-        <li><strong>Affordable housing owners</strong><span>LIHTC, HUD, HPD and supportive housing portfolios</span></li>
-        <li><strong>Nonprofit developers</strong><span>Community organizations with growing portfolios</span></li>
-        <li><strong>Housing authorities & agencies</strong><span>Contracts for management, compliance and capital work</span></li>
-        <li><strong>Investors & management companies</strong><span>Multifamily owners, syndicators and managing agents</span></li>
-      </ul>
+<section class="section tint" id="expertise">
+  <div class="wrap">
+    <div class="head"><h2>Residential depth. Cross-industry reach.</h2><hr class="divider">
+      <p class="lede">Two decades running some of New York's largest residential portfolios built skills that work in any organization with people, buildings, budgets and rules to answer to.</p></div>
+    <div class="duo">
+      <div>
+        <div class="head" style="margin-bottom:24px"><h3>Residential expertise</h3></div>
+        <ul class="list">
+          <li><strong>Affordable & multifamily operations</strong><span>Grew a NYC portfolio to 14,000+ affordable and market-rate units with 400+ employees</span></li>
+          <li><strong>LIHTC & HUD compliance</strong><span>Recertifications, file audits, MOR preparation and agency approvals</span></li>
+          <li><strong>Large-community leadership</strong><span>CEO of Parkchester, the 12,271-unit Bronx community</span></li>
+          <li><strong>Capital programs</strong><span>$15M+ renovation program delivered $3M under budget</span></li>
+          <li><strong>Owners, agencies & nonprofits</strong><span>Housing authorities, community developers, investors and managing agents</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="head" style="margin-bottom:24px"><h3>Transferable skills</h3></div>
+        <ul class="list">
+          <li><strong>Turnarounds & scaling</strong><span>Restructuring organizations and nearly tripling an operation's size without losing control</span></li>
+          <li><strong>Construction & procurement</strong><span>Scoping, bidding, contracting and delivering capital work in any built environment</span></li>
+          <li><strong>Organizational design & staffing</strong><span>Structure, policies, hiring and performance systems for teams of any size</span></li>
+          <li><strong>Regulated programs & contracts</strong><span>Running operations that answer to auditors, lenders, agencies and boards</span></li>
+          <li><strong>Technology & finance</strong><span>AI company founder; asset management and lending experience; P&L and capital stewardship</span></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <div class="head" style="margin-bottom:28px"><h2>How we engage</h2><hr class="divider"></div>
-      <ul class="list">
-        <li><strong>Monthly retainer</strong><span>Ongoing asset management, compliance and operations oversight at a flat fee</span></li>
-        <li><strong>Project engagement</strong><span>File reviews, due diligence, staffing builds, procurement events, capital projects</span></li>
-        <li><strong>Fractional leadership</strong><span>Senior operations leadership inside your team, without a full-time hire</span></li>
-        <li><strong>RFP response</strong><span>Proposals for public and nonprofit solicitations</span></li>
-      </ul>
-    </div>
+    <div class="head" style="margin:72px auto 28px"><h3>Industries we bring them to</h3></div>
+    <ul class="clients industries">
+      <li>Hospitality & food service</li><li>Commercial & mixed-use</li><li>Technology & startups</li>
+      <li>Financial services</li><li>Public sector & nonprofits</li><li>Emerging markets: MENA</li>
+    </ul>
   </div>
 </section>
 
@@ -673,13 +684,21 @@ PAGES = [("",p_home),("services",p_services),("capabilities",p_capabilities),("l
         [("services/"+k,(lambda k: lambda c: p_service(c,k))(k)) for k in SERVICES] + \
         [("insights/"+p["slug"],(lambda p: lambda c: p_post(c,p))(p)) for p in POSTS]
 
+NBH = "\u2011"  # non-breaking hyphen: hyphenated words never split across lines
+def keep_hyphens(html_text):
+    def fix(m): return m.group(1) + re.sub(r"(?<=\w)-(?=\w)", NBH, m.group(2)) + m.group(3)
+    html_text = re.sub(r"(<h[1-4][^>]*>)(.*?)(</h[1-4]>)", fix, html_text, flags=re.S)
+    html_text = re.sub(r'(<a class="btn[^"]*"[^>]*>)(.*?)(</a>)', fix, html_text, flags=re.S)
+    html_text = re.sub(r'(<(?:strong|summary|span class="tag"|li)[^>]*>)([^<]*?)(</(?:strong|summary|span|li)>)', fix, html_text)
+    return html_text
+
 def build(mode, out):
     shutil.rmtree(out, ignore_errors=True); os.makedirs(out)
     shutil.copytree("assets", out+"/assets"); shutil.copy("styles.css", out); shutil.copy("main.js", out)
     for path, fn in PAGES:
         c = Ctx(mode, path); fname = (path or "index") + ".html"
         os.makedirs(os.path.dirname(os.path.join(out, fname)) or out, exist_ok=True)
-        open(os.path.join(out, fname), "w").write(fn(c))
+        open(os.path.join(out, fname), "w").write(keep_hyphens(fn(c)))
     if mode == "prod":
         open(out+"/404.html","w").write(p_404(Ctx("prod","404")))
         open(out+"/robots.txt","w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
