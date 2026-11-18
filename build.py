@@ -133,6 +133,27 @@ def clients_block(c, tint=False):
   <ul class="clients">{cells}</ul>
 </div></section>"""
 
+SAMPLES = [
+  ("Management audit", "An operating review of a residential management company: options analysis with costs, then recommendations organized by function.",
+   [("management-audit-options","Options and findings"),("management-audit-recommendations","Recommendations")]),
+  ("Asset management report", "A quarterly owner report for a mixed residential and commercial portfolio: year-over-year financials, trend data and portfolio charts.",
+   [("asset-report-financial-overview","Financial overview"),("asset-report-charts","Portfolio charts")]),
+  ("Property management report", "A one-page monthly dashboard covering occupancy, leasing, A/R, staffing, work orders, violations and capital projects.",
+   [("property-report-dashboard","Monthly dashboard")]),
+]
+def samples(c, heading="h2"):
+    cards = ""
+    for t, d, pages in SAMPLES:
+        figs = "".join(f'<a class="sample-page" href="{c.A("assets/samples/"+f+".jpg")}" target="_blank" rel="noopener"><img src="{c.A("assets/samples/"+f+".jpg")}" alt="{E(t)}: {E(cap)} (sample, client details removed)" width="1275" height="1650" loading="lazy"><span>{E(cap)}</span></a>' for f, cap in pages)
+        cards += f'<article class="sample"><div class="sample-pages n{len(pages)}">{figs}</div><h3>{E(t)}</h3><p>{E(d)}</p></article>'
+    return f'''<section class="section" id="reporting">
+  <div class="wrap">
+    <div class="head"><{heading}>Reporting samples</{heading}><hr class="divider">
+      <p class="lede">Owners and boards get reporting they can act on. These are excerpts from past work, with client names, properties and identifying details removed.</p></div>
+    <div class="samples">{cards}</div>
+  </div>
+</section>'''
+
 def pillars(c):
     out = []
     for name, sub, keys in PILLARS:
@@ -165,8 +186,12 @@ def p_home(c):
     <h1>Where Vision Takes Flight<br> and Precision Hits the Mark.</h1>
     <p class="catch">The Right Aim. The Perfect Trajectory. Exceptional Results.</p>
     <hr class="divider">
-    <p class="lede">Javelin Residential manages, builds, staffs and sources for affordable and multifamily housing owners, and brings the same operating discipline to organizations in hospitality, technology, finance and the public sector. One accountable team, based in New Rochelle and serving New York City, Westchester, New Jersey and beyond.</p>
-    <div class="cta-row">
+    <div class="lede hero-copy">
+      <p>Javelin Residential is a full-service real estate advisory and operations platform specializing in residential development, construction advisory, owner's representation, asset and property management, staffing, financial analysis, operations reporting and strategic consulting</p>
+      <p>With deep expertise in affordable and multifamily housing, we partner with owners, investors, and organizations to optimize operations, maximize asset value, navigate complex challenges, and deliver measurable results</p>
+      <p>From organizational restructuring and asset repositioning to market analysis, regulatory compliance, and operational transformation, Javelin combines strategic insight with hands-on execution to deliver targeted solutions</p>
+      <p>Serving clients coast-to-coast and internationally, we bring precision to complex challenges and deliver results that go the distance</p>
+    </div>    <div class="cta-row">
       <a class="btn btn-solid" href="{cal('home','hero')}" data-cta="hero-calendly">Book a 15-minute call</a>
       <a class="btn btn-line" href="{c.L('capabilities')}">View capability statement</a>
     </div>
@@ -218,6 +243,8 @@ def p_home(c):
     </ul>
   </div>
 </section>
+
+{samples(c)}
 
 <section class="section">
   <div class="wrap">
@@ -340,6 +367,7 @@ def p_capabilities(c):
   <div class="head" style="margin:72px auto 28px"><h2>NAICS codes</h2><hr class="divider"></div>
   <div class="cap" style="grid-template-columns:1fr"><div style="border-right:0"><table>{naics}</table></div></div>
 </div></section>
+{samples(c)}
 <section class="section tint" id="rfp"><div class="wrap narrow">
   <div class="head"><h2>Send an RFP, RFQ or scope</h2><hr class="divider">
     <p class="lede">Include the solicitation number and due date if there is one. We confirm receipt within one business day and tell you whether we'll bid.</p></div>
@@ -665,7 +693,7 @@ def p_book(c):
   <div class="cta-row"><a class="btn btn-line" href="{cal('book','fallback')}">Open the calendar in a new page</a></div>
 </div></section>
 <section class="section" id="contact"><div class="wrap narrow">
-  <div class="head"><h2>Prefer to write?</h2><hr class="divider"><p class="lede">Send a few details and we'll reply within one business day.</p></div>
+  <div class="head"><h2>Have a problem? Let's discuss it.</h2><hr class="divider"><p class="lede">Send a few details and we'll reply within one business day.</p></div>
   {contact_form('book')}
   <p class="cta-note">{ADDRESS['street']}, {ADDRESS['city']}, {ADDRESS['region']} {ADDRESS['zip']} &middot; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
 </div></section>
